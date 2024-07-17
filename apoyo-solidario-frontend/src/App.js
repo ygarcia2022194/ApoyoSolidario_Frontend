@@ -1,21 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h1>Fundaciones de Ayuda</h1>
+        <p>Bienvenido a nuestra aplicación dedicada a brindar información sobre fundaciones que ayudan a personas en necesidad. Encuentra apoyo y recursos aquí.</p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://www.ejemplo.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Descubre más fundaciones
         </a>
       </header>
     </div>
@@ -23,3 +20,4 @@ function App() {
 }
 
 export default App;
+
