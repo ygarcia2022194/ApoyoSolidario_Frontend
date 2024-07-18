@@ -7,18 +7,14 @@ export const usePublicationById = (id) => {
 
     useEffect(() => {
         const fetchPublicacion = async () => {
-            console.log(`Fetching post with id: ${id}`);
             try {
                 const response = await getPublicacionById(id);
                 if (!response.error) {
                     setPost(response.data);
-                    console.log('Fetched post data:', response.data);
                 } else {
-                    console.error('Error fetching post:', response.error);
                     setPost(null);
                 }
             } catch (error) {
-                console.error('Error fetching post:', error);
                 setPost(null);
             } finally {
                 setIsFetching(false);

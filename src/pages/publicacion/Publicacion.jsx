@@ -6,7 +6,6 @@ import { AgregarComentarioForm } from '../../components/AgregarComentarioForm'
 export const Publicacion = () => {
     const { id } = useParams();
 
-    console.log(id);
     return (
         <div className="bg-background text-foreground">
             <main className="container mx-auto py-12 px-4 md:px-6">
