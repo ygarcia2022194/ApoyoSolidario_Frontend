@@ -7,7 +7,7 @@ const apiClient = axios.create({
 
 export const getPublicaciones = async () => {
     try {
-        return await apiClient.get('/publicaciones/publications')
+        return await apiClient.get('/publications')
     } catch (e) {
         return {
             error: true,
@@ -18,7 +18,7 @@ export const getPublicaciones = async () => {
 
 export const getPublicacionById = async (id) => {
     try {
-        return await apiClient.get(`/publicaciones/publication/${id}`)
+        return await apiClient.get(`/publication/${id}`)
     } catch (e) {
         return {
             error: true,
