@@ -1,23 +1,24 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
-import BurguerButton from './BurguerButton'
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import BurguerButton from './BurguerButton';
 
-export const Navbar = () => {
+export const Navbar = ({ onNavClick }) => {
+  const [clicked, setClicked] = useState(false);
 
-  const [clicked, setClicked] = useState(false)
   const handleClick = () => {
-    setClicked(!clicked)
-  }
+    setClicked(!clicked);
+  };
+
   return (
     <>
       <NavContainer>
         <h2>Navbar <span>Responsive</span></h2>
         <div className={`links ${clicked ? 'active' : ''}`}>
-          <a onClick={handleClick} href="#h">Home</a>
-          <a onClick={handleClick} href="#h">Shop</a>
-          <a onClick={handleClick} href="#h">About</a>
-          <a onClick={handleClick} href="#h">Contact</a>
-          <a onClick={handleClick} href="#h">Blog</a>
+          <a onClick={() => { handleClick(); onNavClick('home'); }} href="#home">Inicio</a>
+          <a onClick={() => { handleClick(); onNavClick('publicaciones'); }} href="#publicaciones">Publicaciones</a>
+          <a onClick={handleClick} href="#sobrenosotros">Sobre nosotros</a>
+          <a onClick={handleClick} href="#contacto">Contacto</a>
+          <a onClick={handleClick} href="#opciones">Opciones</a>
         </div>
         <div className='burguer'>
           <BurguerButton clicked={clicked} handleClick={handleClick} />
@@ -25,10 +26,10 @@ export const Navbar = () => {
         <BgDiv className={`initial ${clicked ? ' active' : ''}`}></BgDiv>
       </NavContainer>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
 
 const NavContainer = styled.nav`
   h2{
@@ -94,7 +95,7 @@ const NavContainer = styled.nav`
       display: none;
     }
   }
-`
+`;
 
 const BgDiv = styled.div`
   background-color: #222;
@@ -113,4 +114,4 @@ const BgDiv = styled.div`
     width: 100%;
     height: 100%;
   }
-`
+`;
