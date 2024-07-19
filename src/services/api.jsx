@@ -26,3 +26,14 @@ export const getPublicacionById = async (id) => {
         }
     }
 }
+
+export const addComment = async (id, nombre, comentario) => {
+    try {
+        return await apiClient.put(`/publication/${id}`, {nombre, comentario})
+    } catch (e) {
+        return {
+            error: true,
+            e: e
+        }
+    }
+}
