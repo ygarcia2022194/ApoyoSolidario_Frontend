@@ -6,13 +6,20 @@
   }
   
   .home-header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #46321b;
+    color: rgb(255, 255, 255);
     padding: 50px 20px;
   }
   
   .categories {
     padding: 20px;
+  }
+
+  .h22 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    color: #030303;
   }
   
   .category-list {
@@ -22,7 +29,7 @@
   }
   
   .category-item {
-    background-color: #f9f9f9;
+    background-color: #030303;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin: 10px;
@@ -31,11 +38,15 @@
   }
   
   .category-item h3 {
-    color: #4CAF50;
+    color: #fab700;
+  }
+
+  p{
+    color: #ddd;
   }
   
   .home-footer {
-    background-color: #333;
+    background-color: #b34343;
     color: white;
     padding: 10px;
     position: fixed;

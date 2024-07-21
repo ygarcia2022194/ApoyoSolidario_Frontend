@@ -15,6 +15,7 @@ export const Dashboard = () => {
       <Navbar onNavClick={handleNavClick} />
       {activeView === 'home' && <HomePage />}
       {activeView === 'publicaciones' && <CardList />}
+
     </>
   );
 };

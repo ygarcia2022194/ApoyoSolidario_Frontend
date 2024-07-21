@@ -1,9 +1,13 @@
+import React from 'react';
 import { usePublicationById } from "../shared/hooks";
-import { CardList } from "./CardList";
+import { CardList } from "./CardList.jsx";
 import { useNavigate } from 'react-router-dom';
+import Navbar from './Nabvar.jsx';
+
 export const PublicacionInfo = ({ id }) => {
     const { post, isFetching } = usePublicationById(id);
     const navigate = useNavigate();
+
     if (isFetching) {
         return <div>Loading...</div>;
     }
@@ -11,12 +15,15 @@ export const PublicacionInfo = ({ id }) => {
     if (!post) {
         return <div>No se encontró la publicación.</div>;
     }
+
     const handleGoBack = () => {
-        navigate('/'); 
+        navigate('/');
     };
+
     return (
         <div className="bg-background text-foreground">
-            <header className="bg-primary text-primary-foreground py-8 px-4 md:px-6">
+            <Navbar onNavClick={(view) => navigate(view)} />  {}
+            <header className="bg-primary text-primary-foreground py-8 px-4 md:px-6 mt-[60px]"> {}
                 <div className="container mx-auto flex flex-col items-center justify-center">
                     <div className="flex items-center gap-4 mb-4">
                         <h1 className="text-3xl font-bold">{post.nombre}</h1>
@@ -98,3 +105,5 @@ export const PublicacionInfo = ({ id }) => {
         </div>
     );
 }
+
+export default PublicacionInfo;

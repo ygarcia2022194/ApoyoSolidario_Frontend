@@ -9,8 +9,9 @@ export const HomePage = () => {
         <h1>Bienvenido a Fundaciones de Ayuda</h1>
         <p>Encuentra información sobre fundaciones y lugares que ayudan a las personas de distintas formas.</p>
       </header>
+      <img src="../asse" alt="" />
       <section className="categories">
-        <h2>Áreas de Ayuda</h2>
+        <h2 className='h22'>Áreas de Ayuda</h2>
         <div className="category-list">
           <div className="category-item">
             <h3>Educación</h3>
