@@ -68,12 +68,13 @@ export const PublicacionInfo = ({ id }) => {
                     <h2 className="mb-4 text-3xl font-bold">Cómo Donar</h2>
                     <p className="text-muted-foreground mb-4 text-lg">{post.comoDonar}</p>
                     <div className="flex flex-col gap-2 sm:flex-row">
-                        <a
-                            href={post.linkDonacion}
-                            className="flex-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-center"
-                        >
-                            Donar Ahora
-                        </a>
+                    <a
+                        href={post.linkDonacion}
+                        target="_blank"
+                        className="flex-1 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-center"
+                    >
+                        Donar Ahora
+                    </a>
                     </div>
                 </section>
                 <section className="mb-12">
