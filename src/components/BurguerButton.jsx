@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 export const BurguerButton = (props) => {
   return (
@@ -15,7 +15,7 @@ export const BurguerButton = (props) => {
   )
 }
 
-export default BurguerButton
+export default BurguerButton;
 
 const Burguer = styled.div`
   /* nav-icon-5 */
@@ -69,4 +69,4 @@ const Burguer = styled.div`
   transform: rotate(-45deg);
   top: 13px;
 }
-`
+`;
