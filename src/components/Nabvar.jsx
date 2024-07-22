@@ -18,9 +18,8 @@ export const Navbar = ({ onNavClick }) => {
       <div className={`links ${clicked ? 'active' : ''}`}>
         <a onClick={() => { handleClick(); onNavClick('home'); }} href="#home">Inicio</a>
         <a onClick={() => { handleClick(); onNavClick('publicaciones'); }} href="#publicaciones">Publicaciones</a>
-        <a onClick={() => { handleClick(); onNavClick('sobrenosotros'); }} href="#sobrenosotros">Sobre nosotros</a>
-        <a onClick={() => { handleClick(); onNavClick('contacto'); }} href="#contacto">Contacto</a>
-        <a onClick={() => { handleClick(); onNavClick('opciones'); }} href="#opciones">Opciones</a>
+        <a onClick={() => { handleClick(); onNavClick('aboutUs'); }} href="#sobrenosotros">Sobre nosotros</a>
+        <a onClick={() => { handleClick(); onNavClick('noticias'); }} href="#noticias">Noticias</a>
       </div>
       <BgDiv className={`initial ${clicked ? 'active' : ''}`}></BgDiv>
     </NavContainer>
