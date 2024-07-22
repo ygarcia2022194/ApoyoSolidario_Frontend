@@ -37,3 +37,14 @@ export const addComment = async (id, nombre, comentario) => {
         }
     }
 }
+
+export const getNotice = async ()=> {
+    try {
+        return await apiClient.get('/noticia')
+    } catch (e) {
+        return {
+            error: true,
+            e: e
+        }
+    }
+}
